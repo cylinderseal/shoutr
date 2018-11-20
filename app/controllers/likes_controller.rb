@@ -14,6 +14,6 @@ class LikesController < ApplicationController
   private
   
     def shout
-      @_shout = Shout.find(params[:id])
+      @_shout ||= Shout.find(params[:id])
     end
 end
